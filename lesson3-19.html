@@ -820,1177 +820,1071 @@
   </div>
 
 <script>
-const MASCOT_POSES={"default":"lesson3-2-media/lesson3-2-asset-1.webp","teacher":"lesson3-2-media/lesson3-2-asset-2.webp","cheer":"lesson3-2-media/lesson3-2-asset-3.webp","speaking":"lesson3-2-media/lesson3-2-asset-4.webp"};
+const MASCOT_POSES={"default":"../assets/hsk3-lesson-ui/lesson3-2-asset-1.webp","teacher":"../assets/hsk3-lesson-ui/lesson3-2-asset-2.webp","cheer":"../assets/hsk3-lesson-ui/lesson3-2-asset-3.webp","speaking":"../assets/hsk3-lesson-ui/lesson3-2-asset-4.webp"};
 const MASCOT_SRC=MASCOT_POSES.default;
 const LESSON = {
   "title": "你没看出来吗？",
-  "vi": "Tôi tin họ sẽ đồng ý.",
+  "vi": "Anh không nhìn ra được à?",
   "vocabulary": [
     {
       "id": 1,
-      "han": "向",
-      "py": "xiàng",
-      "vi": "hướng về; đối với; về phía",
-      "pos": "GIỚI TỪ/ĐỘNG TỪ",
-      "cat": "direction",
-      "example": "有问题可以向老师请教。",
-      "exampleVi": "Có vấn đề thì có thể hỏi giáo viên."
+      "han": "耳朵",
+      "py": "ěrduo",
+      "vi": "tai",
+      "pos": "DANH TỪ",
+      "cat": "body",
+      "example": "女儿最近喜欢把头发放在耳朵后面。",
+      "exampleVi": "Gần đây con gái thích để tóc ra sau tai."
     },
     {
       "id": 2,
-      "han": "万",
-      "py": "wàn",
-      "vi": "vạn; mười nghìn",
-      "pos": "SỐ TỪ",
-      "cat": "number",
-      "example": "这套房子要八十多万。",
-      "exampleVi": "Căn nhà này giá hơn tám trăm nghìn tệ."
+      "han": "脸",
+      "py": "liǎn",
+      "vi": "mặt; khuôn mặt",
+      "pos": "DANH TỪ",
+      "cat": "body",
+      "example": "这样可以使她的脸看上去漂亮一些。",
+      "exampleVi": "Như vậy có thể khiến khuôn mặt cô ấy trông xinh hơn một chút."
     },
     {
       "id": 3,
-      "han": "只",
-      "py": "zhī",
-      "vi": "con; chiếc (lượng từ cho động vật và một số đồ vật)",
-      "pos": "LƯỢNG TỪ",
-      "cat": "classifier",
-      "example": "公园里有一只很可爱的小狗。",
-      "exampleVi": "Trong công viên có một chú chó rất đáng yêu."
+      "han": "短",
+      "py": "duǎn",
+      "vi": "ngắn",
+      "pos": "TÍNH TỪ",
+      "cat": "quality",
+      "example": "她小时候喜欢短头发。",
+      "exampleVi": "Hồi nhỏ cô ấy thích tóc ngắn."
     },
     {
       "id": 4,
-      "han": "嘴",
-      "py": "zuǐ",
-      "vi": "miệng; mỏ",
+      "han": "马",
+      "py": "mǎ",
+      "vi": "ngựa",
       "pos": "DANH TỪ",
-      "cat": "body",
-      "example": "这只鸟的嘴是黄色的。",
-      "exampleVi": "Mỏ của con chim này màu vàng."
+      "cat": "animal",
+      "example": "上次我们参加了骑马比赛。",
+      "exampleVi": "Lần trước chúng tôi tham gia cuộc thi cưỡi ngựa."
     },
     {
       "id": 5,
-      "han": "动物",
-      "py": "dòngwù",
-      "vi": "động vật",
-      "pos": "DANH TỪ",
-      "cat": "animal",
-      "example": "孩子们都喜欢去动物园看动物。",
-      "exampleVi": "Trẻ em đều thích đến sở thú xem động vật."
+      "han": "张",
+      "py": "zhāng",
+      "vi": "tờ; tấm; lượng từ cho vật phẳng như giấy, ảnh",
+      "pos": "LƯỢNG TỪ",
+      "cat": "classifier",
+      "example": "我选了几张照片洗出来了。",
+      "exampleVi": "Tôi đã chọn vài tấm ảnh đem rửa ra rồi."
     },
     {
       "id": 6,
-      "han": "段",
-      "py": "duàn",
-      "vi": "đoạn; khoảng (thời gian, đường, văn bản)",
+      "han": "位",
+      "py": "wèi",
+      "vi": "vị; lượng từ dùng cho người, hàm ý kính trọng",
       "pos": "LƯỢNG TỪ",
       "cat": "classifier",
-      "example": "这段时间我工作特别忙。",
-      "exampleVi": "Khoảng thời gian này tôi đặc biệt bận."
+      "example": "骑得最快的这位是谁？",
+      "exampleVi": "Vị cưỡi nhanh nhất này là ai?"
     },
     {
       "id": 7,
-      "han": "不但……而且……",
-      "py": "búdàn…érqiě…",
-      "vi": "không những… mà còn…",
-      "pos": "LIÊN TỪ",
-      "cat": "grammar",
-      "example": "她不但会说汉语，而且会说日语。",
-      "exampleVi": "Cô ấy không những biết nói tiếng Trung mà còn biết nói tiếng Nhật."
+      "han": "蓝",
+      "py": "lán",
+      "vi": "có màu xanh da trời; xanh lam",
+      "pos": "TÍNH TỪ",
+      "cat": "color",
+      "example": "他今天穿蓝西服。",
+      "exampleVi": "Hôm nay anh ấy mặc âu phục màu xanh."
     },
     {
       "id": 8,
-      "han": "有名",
-      "py": "yǒumíng",
-      "vi": "nổi tiếng; có tiếng",
-      "pos": "TÍNH TỪ",
-      "cat": "quality",
-      "example": "这家饭店在当地很有名。",
-      "exampleVi": "Nhà hàng này rất nổi tiếng ở địa phương."
+      "han": "秋（天）",
+      "py": "qiū (tiān)",
+      "vi": "(mùa) thu",
+      "pos": "DANH TỪ",
+      "cat": "time",
+      "example": "她去年秋天出生的。",
+      "exampleVi": "Cô bé sinh vào mùa thu năm ngoái."
     },
     {
       "id": 9,
-      "han": "同意",
-      "py": "tóngyì",
-      "vi": "đồng ý; tán thành",
+      "han": "过",
+      "py": "guò",
+      "vi": "ăn (mừng); trải qua",
       "pos": "ĐỘNG TỪ",
-      "cat": "mind",
-      "example": "父母已经同意我的计划了。",
-      "exampleVi": "Bố mẹ đã đồng ý với kế hoạch của tôi."
+      "cat": "action",
+      "example": "她刚过完一岁生日。",
+      "exampleVi": "Cô bé vừa mừng xong sinh nhật một tuổi."
     },
     {
       "id": 10,
-      "han": "相信",
-      "py": "xiāngxìn",
-      "vi": "tin; tin tưởng",
-      "pos": "ĐỘNG TỪ",
-      "cat": "mind",
-      "example": "我相信你一定能做好。",
-      "exampleVi": "Tôi tin bạn nhất định có thể làm tốt."
+      "han": "鸟",
+      "py": "niǎo",
+      "vi": "chim",
+      "pos": "DANH TỪ",
+      "cat": "animal",
+      "example": "她就喜欢听她爸爸学鸟叫。",
+      "exampleVi": "Cô bé chỉ thích nghe bố bắt chước tiếng chim kêu."
     },
     {
       "id": 11,
-      "han": "关于",
-      "py": "guānyú",
-      "vi": "về; liên quan đến",
-      "pos": "GIỚI TỪ",
-      "cat": "grammar",
-      "example": "关于这件事，我们明天再讨论。",
-      "exampleVi": "Về việc này, ngày mai chúng ta thảo luận tiếp."
+      "han": "哭",
+      "py": "kū",
+      "vi": "khóc",
+      "pos": "ĐỘNG TỪ",
+      "cat": "action",
+      "example": "哭的时候，她马上就安静下来了。",
+      "exampleVi": "Khi khóc, cô bé lập tức yên lặng lại."
     },
     {
       "id": 12,
-      "han": "机会",
-      "py": "jīhuì",
-      "vi": "cơ hội",
+      "han": "黄河",
+      "py": "Huáng Hé",
+      "vi": "Hoàng Hà; con sông lớn thứ hai ở Trung Quốc",
       "pos": "DANH TỪ",
-      "cat": "work",
-      "example": "谢谢您给我这次工作机会。",
-      "exampleVi": "Cảm ơn ông đã cho tôi cơ hội làm việc lần này."
+      "cat": "travel",
+      "example": "我先去看了黄河。",
+      "exampleVi": "Trước tiên tôi đi ngắm Hoàng Hà."
     },
     {
       "id": 13,
-      "han": "国家",
-      "py": "guójiā",
-      "vi": "đất nước; quốc gia",
+      "han": "船",
+      "py": "chuán",
+      "vi": "thuyền; tàu",
       "pos": "DANH TỪ",
-      "cat": "culture",
-      "example": "每个国家都有自己的文化。",
-      "exampleVi": "Mỗi quốc gia đều có văn hóa riêng."
+      "cat": "travel",
+      "example": "我坐在船上，一边看一边照相。",
+      "exampleVi": "Tôi ngồi trên thuyền, vừa ngắm vừa chụp ảnh."
     },
     {
       "id": 14,
-      "han": "种",
-      "py": "zhǒng",
-      "vi": "loại; giống",
-      "pos": "LƯỢNG TỪ",
-      "cat": "classifier",
-      "example": "这家店有很多种茶。",
-      "exampleVi": "Cửa hàng này có rất nhiều loại trà."
-    },
-    {
-      "id": 15,
-      "han": "特点",
-      "py": "tèdiǎn",
-      "vi": "đặc điểm; nét đặc trưng",
-      "pos": "DANH TỪ",
-      "cat": "culture",
-      "example": "这种学习方法有什么特点？",
-      "exampleVi": "Phương pháp học này có đặc điểm gì?"
-    },
-    {
-      "id": 16,
-      "han": "奇怪",
-      "py": "qíguài",
-      "vi": "kỳ lạ; lạ lùng",
-      "pos": "TÍNH TỪ",
-      "cat": "feeling",
-      "example": "他今天没来，真奇怪。",
-      "exampleVi": "Hôm nay anh ấy không đến, thật kỳ lạ."
-    },
-    {
-      "id": 17,
-      "han": "地",
-      "py": "de",
-      "vi": "trợ từ kết cấu, nối trạng ngữ với động từ",
-      "pos": "TRỢ TỪ",
-      "cat": "grammar",
-      "example": "她认真地准备明天的面试。",
-      "exampleVi": "Cô ấy nghiêm túc chuẩn bị cho buổi phỏng vấn ngày mai."
+      "han": "经过",
+      "py": "jīngguò",
+      "vi": "đi ngang qua; đi qua",
+      "pos": "ĐỘNG TỪ",
+      "cat": "travel",
+      "example": "一路上经过了很多地方。",
+      "exampleVi": "Dọc đường đã đi qua rất nhiều nơi."
     }
   ],
   "extraVocabulary": [
     {
-      "han": "银行",
-      "py": "yínháng",
-      "vi": "ngân hàng",
+      "han": "头发",
+      "py": "tóufa",
+      "vi": "tóc",
       "pos": "DANH TỪ"
     },
     {
-      "han": "借钱",
-      "py": "jiè qián",
-      "vi": "vay tiền",
+      "han": "女儿",
+      "py": "nǚ'ér",
+      "vi": "con gái",
+      "pos": "DANH TỪ"
+    },
+    {
+      "han": "放",
+      "py": "fàng",
+      "vi": "đặt; để",
       "pos": "ĐỘNG TỪ"
     },
     {
-      "han": "材料",
-      "py": "cáiliào",
-      "vi": "tài liệu; hồ sơ",
+      "han": "后面",
+      "py": "hòumian",
+      "vi": "phía sau",
       "pos": "DANH TỪ"
     },
     {
-      "han": "申请",
-      "py": "shēnqǐng",
-      "vi": "xin; đăng ký",
-      "pos": "ĐỘNG TỪ"
+      "han": "看上去",
+      "py": "kàn shàngqu",
+      "vi": "trông; nhìn có vẻ",
+      "pos": "CỤM ĐỘNG TỪ"
     },
     {
-      "han": "受伤",
-      "py": "shòushāng",
-      "vi": "bị thương",
-      "pos": "ĐỘNG TỪ"
+      "han": "漂亮",
+      "py": "piàoliang",
+      "vi": "xinh; đẹp",
+      "pos": "TÍNH TỪ"
     },
     {
-      "han": "照顾",
-      "py": "zhàogù",
-      "vi": "chăm sóc",
-      "pos": "ĐỘNG TỪ"
-    },
-    {
-      "han": "环境",
-      "py": "huánjìng",
-      "vi": "môi trường",
-      "pos": "DANH TỪ"
-    },
-    {
-      "han": "家人",
-      "py": "jiārén",
-      "vi": "người nhà",
-      "pos": "DANH TỪ"
-    },
-    {
-      "han": "申请表",
-      "py": "shēnqǐngbiǎo",
-      "vi": "đơn đăng ký",
-      "pos": "DANH TỪ"
-    },
-    {
-      "han": "姓",
-      "py": "xìng",
-      "vi": "họ",
-      "pos": "DANH/ĐỘNG TỪ"
-    },
-    {
-      "han": "习惯",
-      "py": "xíguàn",
-      "vi": "quen; thói quen",
+      "han": "变化",
+      "py": "biànhuà",
+      "vi": "thay đổi; sự thay đổi",
       "pos": "ĐỘNG/DANH TỪ"
     },
     {
-      "han": "新环境",
-      "py": "xīn huánjìng",
-      "vi": "môi trường mới",
+      "han": "小时候",
+      "py": "xiǎoshíhou",
+      "vi": "lúc nhỏ; hồi nhỏ",
       "pos": "CỤM TỪ"
+    },
+    {
+      "han": "男孩子",
+      "py": "nánháizi",
+      "vi": "con trai",
+      "pos": "DANH TỪ"
+    },
+    {
+      "han": "想起来",
+      "py": "xiǎng qǐlái",
+      "vi": "nhớ ra",
+      "pos": "CỤM ĐỘNG TỪ"
+    },
+    {
+      "han": "照片",
+      "py": "zhàopiàn",
+      "vi": "ảnh; bức ảnh",
+      "pos": "DANH TỪ"
+    },
+    {
+      "han": "洗出来",
+      "py": "xǐ chūlái",
+      "vi": "rửa/hiện ảnh ra",
+      "pos": "CỤM ĐỘNG TỪ"
+    },
+    {
+      "han": "西服",
+      "py": "xīfú",
+      "vi": "âu phục",
+      "pos": "DANH TỪ"
+    },
+    {
+      "han": "衬衫",
+      "py": "chènshān",
+      "vi": "áo sơ mi",
+      "pos": "DANH TỪ"
+    },
+    {
+      "han": "运动服",
+      "py": "yùndòngfú",
+      "vi": "đồ thể thao",
+      "pos": "DANH TỪ"
+    },
+    {
+      "han": "年轻",
+      "py": "niánqīng",
+      "vi": "trẻ; trẻ tuổi",
+      "pos": "TÍNH TỪ"
+    },
+    {
+      "han": "出生",
+      "py": "chūshēng",
+      "vi": "sinh ra",
+      "pos": "ĐỘNG TỪ"
+    },
+    {
+      "han": "生日",
+      "py": "shēngrì",
+      "vi": "sinh nhật",
+      "pos": "DANH TỪ"
+    },
+    {
+      "han": "安静下来",
+      "py": "ānjìng xiàlái",
+      "vi": "yên lặng lại",
+      "pos": "CỤM TỪ"
+    },
+    {
+      "han": "礼物",
+      "py": "lǐwù",
+      "vi": "quà; quà tặng",
+      "pos": "DANH TỪ"
+    },
+    {
+      "han": "旅游",
+      "py": "lǚyóu",
+      "vi": "du lịch",
+      "pos": "ĐỘNG TỪ"
+    },
+    {
+      "han": "难忘",
+      "py": "nánwàng",
+      "vi": "khó quên",
+      "pos": "TÍNH TỪ"
+    },
+    {
+      "han": "照相",
+      "py": "zhàoxiàng",
+      "vi": "chụp ảnh",
+      "pos": "ĐỘNG TỪ"
+    },
+    {
+      "han": "一路上",
+      "py": "yílù shang",
+      "vi": "dọc đường; suốt dọc đường",
+      "pos": "CỤM TỪ"
+    },
+    {
+      "han": "发给",
+      "py": "fā gěi",
+      "vi": "gửi cho",
+      "pos": "CỤM ĐỘNG TỪ"
+    },
+    {
+      "han": "高兴",
+      "py": "gāoxing",
+      "vi": "vui; vui vẻ",
+      "pos": "TÍNH TỪ"
     }
   ],
   "review": [
-    "房子 fángzi · nhà",
-    "银行 yínháng · ngân hàng",
-    "照顾 zhàogù · chăm sóc",
-    "工作 gōngzuò · công việc",
-    "环境 huánjìng · môi trường",
-    "家人 jiārén · người nhà",
-    "文化 wénhuà · văn hóa",
-    "习惯 xíguàn · quen",
-    "认真 rènzhēn · nghiêm túc",
-    "问题 wèntí · vấn đề"
+    "头发 tóufa · tóc",
+    "漂亮 piàoliang · xinh đẹp",
+    "照片 zhàopiàn · ảnh",
+    "西服 xīfú · âu phục",
+    "衬衫 chènshān · áo sơ mi",
+    "运动服 yùndòngfú · đồ thể thao",
+    "出生 chūshēng · sinh ra",
+    "生日 shēngrì · sinh nhật",
+    "旅游 lǚyóu · du lịch",
+    "高兴 gāoxing · vui"
   ],
   "readings": [
     {
-      "title": "买房子的计划",
-      "theme": "TÀI CHÍNH & NHÀ Ở",
-      "icon": "万",
+      "title": "在家",
+      "theme": "Ở NHÀ",
+      "icon": "家",
       "lines": [
         {
-          "han": "朋友：听说你打算买房子，需要多少钱？",
-          "py": "Péngyou: Tīngshuō nǐ dǎsuàn mǎi fángzi, xūyào duōshao qián?",
-          "vi": "Bạn: Nghe nói bạn định mua nhà, cần bao nhiêu tiền?"
+          "han": "爸爸：女儿最近喜欢把头发放在耳朵后面，你知道为什么吗？",
+          "py": "Bàba: Nǚ'ér zuìjìn xǐhuan bǎ tóufa fàng zài ěrduo hòumian, nǐ zhīdào wèishénme ma?",
+          "vi": "Bố: Gần đây con gái thích để tóc ra sau tai, em có biết vì sao không?"
         },
         {
-          "han": "周明：房子要九十多万，我打算向银行借一部分。",
-          "py": "Zhōu Míng: Fángzi yào jiǔshí duō wàn, wǒ dǎsuàn xiàng yínháng jiè yí bùfen.",
-          "vi": "Chu Minh: Căn nhà giá hơn chín trăm nghìn tệ, tôi định vay ngân hàng một phần."
+          "han": "妈妈：这样可以使她的脸看上去漂亮一些。",
+          "py": "Māma: Zhèyàng kěyǐ shǐ tā de liǎn kàn shàngqu piàoliang yìxiē.",
+          "vi": "Mẹ: Như vậy có thể khiến khuôn mặt con bé trông xinh hơn một chút."
         },
         {
-          "han": "朋友：只要材料准备好，申请应该不会太难。",
-          "py": "Péngyou: Zhǐyào cáiliào zhǔnbèi hǎo, shēnqǐng yīnggāi bú huì tài nán.",
-          "vi": "Bạn: Chỉ cần chuẩn bị hồ sơ tốt thì việc đăng ký chắc sẽ không quá khó."
+          "han": "爸爸：我最近觉得她和以前不太一样了。",
+          "py": "Bàba: Wǒ zuìjìn juéde tā hé yǐqián bú tài yíyàng le.",
+          "vi": "Bố: Gần đây anh cảm thấy con bé không còn giống trước lắm."
+        },
+        {
+          "han": "妈妈：女儿变化不小，她小时候喜欢短头发，像男孩子一样。",
+          "py": "Māma: Nǚ'ér biànhuà bù xiǎo, tā xiǎoshíhou xǐhuan duǎn tóufa, xiàng nánháizi yíyàng.",
+          "vi": "Mẹ: Con gái thay đổi khá nhiều, hồi nhỏ nó thích tóc ngắn, giống con trai."
+        },
+        {
+          "han": "爸爸：我也想起来了。她现在慢慢地开始像个女孩子了。",
+          "py": "Bàba: Wǒ yě xiǎng qǐlái le. Tā xiànzài mànmàn de kāishǐ xiàng ge nǚháizi le.",
+          "vi": "Bố: Anh cũng nhớ ra rồi. Bây giờ con bé dần bắt đầu ra dáng con gái rồi."
         }
       ]
     },
     {
-      "title": "照顾一只小狗",
-      "theme": "ĐỘNG VẬT & CHĂM SÓC",
-      "icon": "狗",
+      "title": "在看照片",
+      "theme": "ĐANG XEM ẢNH",
+      "icon": "照",
       "lines": [
         {
-          "han": "小明：妈妈，这只小狗的嘴怎么受伤了？",
-          "py": "Xiǎo Míng: Māma, zhè zhī xiǎogǒu de zuǐ zěnme shòushāng le?",
-          "vi": "Tiểu Minh: Mẹ ơi, sao miệng của chú chó này bị thương vậy?"
+          "han": "小丽：上次我们参加骑马比赛的照片，我选了几张洗出来了。",
+          "py": "Xiǎo Lì: Shàng cì wǒmen cānjiā qímǎ bǐsài de zhàopiàn, wǒ xuǎn le jǐ zhāng xǐ chūlái le.",
+          "vi": "Tiểu Lệ: Ảnh lần trước chúng ta tham gia cuộc thi cưỡi ngựa, tôi đã chọn vài tấm đem rửa ra rồi."
         },
         {
-          "han": "妈妈：它跑得太快，撞到门了。动物和孩子一样，都需要人照顾。",
-          "py": "Māma: Tā pǎo de tài kuài, zhuàng dào mén le. Dòngwù hé háizi yíyàng, dōu xūyào rén zhàogù.",
-          "vi": "Mẹ: Nó chạy quá nhanh nên va vào cửa. Động vật cũng giống trẻ em, đều cần người chăm sóc."
+          "han": "同事：快给我看看。骑得最快的这位是谁？",
+          "py": "Tóngshì: Kuài gěi wǒ kànkan. Qí de zuì kuài de zhè wèi shì shéi?",
+          "vi": "Đồng nghiệp: Mau cho tôi xem. Vị cưỡi nhanh nhất này là ai?"
         },
         {
-          "han": "小明：这段时间我每天都认真地照顾它。",
-          "py": "Xiǎo Míng: Zhè duàn shíjiān wǒ měitiān dōu rènzhēn de zhàogù tā.",
-          "vi": "Tiểu Minh: Khoảng thời gian này ngày nào con cũng chăm sóc nó thật cẩn thận."
+          "han": "小丽：你没看出来吗？他是小刚啊。",
+          "py": "Xiǎo Lì: Nǐ méi kàn chūlái ma? Tā shì Xiǎo Gāng a.",
+          "vi": "Tiểu Lệ: Anh không nhận ra à? Anh ấy là Tiểu Cương mà."
+        },
+        {
+          "han": "同事：怎么看上去跟现在不太一样？",
+          "py": "Tóngshì: Zěnme kàn shàngqu gēn xiànzài bú tài yíyàng?",
+          "vi": "Đồng nghiệp: Sao trông không giống bây giờ lắm?"
+        },
+        {
+          "han": "小丽：他上班穿西服、衬衫，比赛的时候穿的是运动服。",
+          "py": "Xiǎo Lì: Tā shàngbān chuān xīfú, chènshān, bǐsài de shíhou chuān de shì yùndòngfú.",
+          "vi": "Tiểu Lệ: Lúc đi làm anh ấy mặc âu phục, sơ mi; lúc thi đấu thì mặc đồ thể thao."
+        },
+        {
+          "han": "同事：他今天穿蓝西服，看上去像40多岁，还是穿运动服让他更年轻。",
+          "py": "Tóngshì: Tā jīntiān chuān lán xīfú, kàn shàngqu xiàng sìshí duō suì, háishi chuān yùndòngfú ràng tā gèng niánqīng.",
+          "vi": "Đồng nghiệp: Hôm nay anh ấy mặc âu phục xanh, trông như hơn 40 tuổi; vẫn là mặc đồ thể thao khiến anh ấy trông trẻ hơn."
         }
       ]
     },
     {
-      "title": "在公司面试",
-      "theme": "CÔNG VIỆC & CƠ HỘI",
-      "icon": "信",
+      "title": "在小丽家",
+      "theme": "TẠI NHÀ TIỂU LỆ",
+      "icon": "秋",
       "lines": [
         {
-          "han": "经理：你为什么选择来我们公司工作？",
-          "py": "Jīnglǐ: Nǐ wèishénme xuǎnzé lái wǒmen gōngsī gōngzuò?",
-          "vi": "Giám đốc: Vì sao bạn chọn đến công ty chúng tôi làm việc?"
+          "han": "朋友：我们一年没见面了吧？",
+          "py": "Péngyou: Wǒmen yì nián méi jiànmiàn le ba?",
+          "vi": "Bạn: Chúng ta một năm rồi không gặp nhau nhỉ?"
         },
         {
-          "han": "学生：贵公司不但很有名，而且工作环境也很好。",
-          "py": "Xuésheng: Guì gōngsī búdàn hěn yǒumíng, érqiě gōngzuò huánjìng yě hěn hǎo.",
-          "vi": "Sinh viên: Công ty của quý vị không những rất nổi tiếng mà môi trường làm việc cũng rất tốt."
+          "han": "小丽：听说你都有女儿了？她多大了？",
+          "py": "Xiǎo Lì: Tīngshuō nǐ dōu yǒu nǚ'ér le? Tā duō dà le?",
+          "vi": "Tiểu Lệ: Nghe nói bạn đã có con gái rồi à? Bé bao nhiêu tuổi rồi?"
         },
         {
-          "han": "经理：你的家人同意吗？",
-          "py": "Jīnglǐ: Nǐ de jiārén tóngyì ma?",
-          "vi": "Giám đốc: Người nhà của bạn có đồng ý không?"
+          "han": "朋友：她去年秋天出生的，刚过完一岁生日。",
+          "py": "Péngyou: Tā qùnián qiūtiān chūshēng de, gāng guò wán yí suì shēngrì.",
+          "vi": "Bạn: Bé sinh vào mùa thu năm ngoái, vừa mừng xong sinh nhật một tuổi."
         },
         {
-          "han": "学生：只要我认真工作，你没看出来吗？。谢谢您给我这个机会。",
-          "py": "Xuésheng: Zhǐyào wǒ rènzhēn gōngzuò, wǒ xiāngxìn tāmen huì tóngyì de. Xièxie nín gěi wǒ zhège jīhuì.",
-          "vi": "Sinh viên: Chỉ cần tôi làm việc nghiêm túc, tôi tin họ sẽ đồng ý. Cảm ơn ông đã cho tôi cơ hội này."
+          "han": "小丽：她喜欢什么？我送给她。",
+          "py": "Xiǎo Lì: Tā xǐhuan shénme? Wǒ sòng gěi tā.",
+          "vi": "Tiểu Lệ: Bé thích gì? Tôi tặng cho bé."
+        },
+        {
+          "han": "朋友：她就喜欢听她爸爸学鸟叫。哭的时候，只要她爸爸学小鸟叫，她马上就安静下来了。",
+          "py": "Péngyou: Tā jiù xǐhuan tīng tā bàba xué niǎo jiào. Kū de shíhou, zhǐyào tā bàba xué xiǎoniǎo jiào, tā mǎshàng jiù ānjìng xiàlái le.",
+          "vi": "Bạn: Bé chỉ thích nghe bố bắt chước tiếng chim kêu. Lúc khóc, chỉ cần bố bắt chước tiếng chim nhỏ, bé lập tức yên lặng lại."
+        },
+        {
+          "han": "小丽：啊？这个礼物我没办法送。",
+          "py": "Xiǎo Lì: A? Zhège lǐwù wǒ méi bànfǎ sòng.",
+          "vi": "Tiểu Lệ: Hả? Món quà này thì tôi không có cách nào tặng được."
         }
       ]
     },
     {
-      "title": "了解不同的文化",
-      "theme": "QUỐC GIA & VĂN HÓA",
-      "icon": "国",
+      "title": "这次旅游",
+      "theme": "DU LỊCH",
+      "icon": "河",
       "lines": [
         {
-          "han": "不同的国家有不同的文化，每种文化都有自己的特点。",
-          "py": "Bùtóng de guójiā yǒu bùtóng de wénhuà, měi zhǒng wénhuà dōu yǒu zìjǐ de tèdiǎn.",
-          "vi": "Các quốc gia khác nhau có những nền văn hóa khác nhau, mỗi loại văn hóa đều có đặc điểm riêng."
+          "han": "这次旅游，我去了不少地方，每个地方都让我非常难忘。",
+          "py": "Zhè cì lǚyóu, wǒ qù le bù shǎo dìfang, měi ge dìfang dōu ràng wǒ fēicháng nánwàng.",
+          "vi": "Chuyến du lịch lần này, tôi đã đến khá nhiều nơi; nơi nào cũng khiến tôi vô cùng khó quên."
         },
         {
-          "han": "到了一个新环境，有些事情开始会让你觉得很奇怪。",
-          "py": "Dào le yí ge xīn huánjìng, yǒuxiē shìqing kāishǐ huì ràng nǐ juéde hěn qíguài.",
-          "vi": "Khi đến một môi trường mới, lúc đầu có một số việc sẽ khiến bạn cảm thấy rất kỳ lạ."
+          "han": "我先去看了黄河，黄河是中国有名的大河，我坐在船上，一边看一边照相。",
+          "py": "Wǒ xiān qù kàn le Huáng Hé, Huáng Hé shì Zhōngguó yǒumíng de dà hé, wǒ zuò zài chuán shang, yìbiān kàn yìbiān zhàoxiàng.",
+          "vi": "Trước tiên tôi đi ngắm Hoàng Hà. Hoàng Hà là một con sông lớn nổi tiếng của Trung Quốc; tôi ngồi trên thuyền, vừa ngắm vừa chụp ảnh."
         },
         {
-          "han": "关于这些文化差异，只要认真地学习一段时间，就会慢慢习惯。",
-          "py": "Guānyú zhèxiē wénhuà chāyì, zhǐyào rènzhēn de xuéxí yí duàn shíjiān, jiù huì mànman xíguàn.",
-          "vi": "Về những khác biệt văn hóa này, chỉ cần nghiêm túc tìm hiểu một thời gian thì sẽ dần quen."
+          "han": "一路上经过了很多地方，每个地方都不一样。",
+          "py": "Yílù shang jīngguò le hěn duō dìfang, měi ge dìfang dōu bù yíyàng.",
+          "vi": "Dọc đường đã đi qua rất nhiều nơi, mỗi nơi đều khác nhau."
+        },
+        {
+          "han": "我想快点儿把照片发给大家，叫朋友们也高兴高兴。",
+          "py": "Wǒ xiǎng kuài diǎnr bǎ zhàopiàn fā gěi dàjiā, jiào péngyoumen yě gāoxing gāoxing.",
+          "vi": "Tôi muốn nhanh chóng gửi ảnh cho mọi người, để bạn bè cũng vui lây."
         }
       ]
     }
   ],
   "fill": [
     {
-      "q": "有问题可以___老师请教。",
-      "vi": "Có vấn đề thì có thể hỏi giáo viên.",
+      "q": "帮我把这几___照片洗出来吧。",
+      "vi": "Giúp tôi rửa mấy tấm ảnh này ra nhé.",
       "options": [
-        "向",
-        "段",
-        "只"
+        "张",
+        "秋天",
+        "鸟"
       ],
-      "answer": "向"
+      "answer": "张"
     },
     {
-      "q": "这套房子要八十多___。",
-      "vi": "Căn nhà này giá hơn tám trăm nghìn tệ.",
+      "q": "你还记得18岁生日是在哪儿___的吗？",
+      "vi": "Bạn còn nhớ sinh nhật 18 tuổi đã tổ chức ở đâu không?",
       "options": [
-        "万",
-        "种",
-        "只"
+        "过",
+        "船",
+        "张"
       ],
-      "answer": "万"
+      "answer": "过"
     },
     {
-      "q": "公园里有一___很可爱的小狗。",
-      "vi": "Trong công viên có một chú chó rất đáng yêu.",
+      "q": "___是北京最好的季节。",
+      "vi": "Mùa thu là mùa đẹp nhất ở Bắc Kinh.",
       "options": [
-        "只",
-        "段",
-        "万"
+        "秋天",
+        "鸟",
+        "船"
       ],
-      "answer": "只"
+      "answer": "秋天"
     },
     {
-      "q": "这只鸟的___是黄色的。",
-      "vi": "Mỏ của con chim này màu vàng.",
+      "q": "他真爱说话，像只小___一样。",
+      "vi": "Anh ấy thật thích nói, giống như một chú chim nhỏ vậy.",
       "options": [
-        "嘴",
-        "特点",
-        "机会"
+        "鸟",
+        "马",
+        "耳朵"
       ],
-      "answer": "嘴"
+      "answer": "鸟"
     },
     {
-      "q": "孩子们都喜欢去动物园看___。",
-      "vi": "Trẻ em đều thích đến sở thú xem động vật.",
+      "q": "我希望能坐___去旅行一次。",
+      "vi": "Tôi hy vọng có thể đi thuyền du lịch một lần.",
       "options": [
-        "动物",
-        "国家",
-        "关于"
+        "船",
+        "张",
+        "位"
       ],
-      "answer": "动物"
+      "answer": "船"
     },
     {
-      "q": "这___时间我工作特别忙。",
-      "vi": "Khoảng thời gian này tôi đặc biệt bận.",
+      "q": "A：你怎么又___了？ B：我想家了。",
+      "vi": "A: Sao bạn lại khóc rồi? B: Tôi nhớ nhà.",
       "options": [
-        "段",
-        "种",
-        "只"
+        "哭",
+        "经过",
+        "位"
       ],
-      "answer": "段"
+      "answer": "哭"
     },
     {
-      "q": "她___会说汉语，___会说日语。",
-      "vi": "Cô ấy không những biết nói tiếng Trung mà còn biết nói tiếng Nhật.",
+      "q": "A：你一会儿___超市吗？帮我买瓶水吧。 B：行，没问题。",
+      "vi": "A: Lát nữa bạn có đi ngang qua siêu thị không? Mua giúp tôi chai nước nhé. B: Được, không vấn đề.",
       "options": [
-        "不但……而且……",
-        "只要……就……",
-        "关于……"
+        "经过",
+        "哭",
+        "马"
       ],
-      "answer": "不但……而且……"
+      "answer": "经过"
     },
     {
-      "q": "这家饭店在当地很___。",
-      "vi": "Nhà hàng này rất nổi tiếng ở địa phương.",
+      "q": "A：你怎么了？ B：我___里边有点儿疼。",
+      "vi": "A: Bạn sao vậy? B: Bên trong tai tôi hơi đau.",
       "options": [
-        "有名",
-        "奇怪",
-        "同意"
+        "耳朵",
+        "位",
+        "船"
       ],
-      "answer": "有名"
+      "answer": "耳朵"
     },
     {
-      "q": "父母已经___我的计划了。",
-      "vi": "Bố mẹ đã đồng ý với kế hoạch của tôi.",
+      "q": "A：您好，欢迎，请问您几___？ B：您好，我们一共是五个人。",
+      "vi": "A: Xin chào, hoan nghênh quý khách, xin hỏi mấy vị ạ? B: Chúng tôi tổng cộng năm người.",
       "options": [
-        "同意",
-        "相信",
-        "提高"
+        "位",
+        "张",
+        "鸟"
       ],
-      "answer": "同意"
+      "answer": "位"
     },
     {
-      "q": "我___你一定能做好。",
-      "vi": "Tôi tin bạn nhất định có thể làm tốt.",
+      "q": "A：你会骑___吗？ B：不会，我从来没骑过。",
+      "vi": "A: Bạn biết cưỡi ngựa không? B: Không, tôi chưa từng cưỡi.",
       "options": [
-        "相信",
-        "关于",
-        "向"
+        "马",
+        "船",
+        "秋天"
       ],
-      "answer": "相信"
-    },
-    {
-      "q": "___这件事，我们明天再讨论。",
-      "vi": "Về việc này, ngày mai chúng ta thảo luận tiếp.",
-      "options": [
-        "关于",
-        "向",
-        "其他"
-      ],
-      "answer": "关于"
-    },
-    {
-      "q": "谢谢您给我这次工作___。",
-      "vi": "Cảm ơn ông đã cho tôi cơ hội làm việc lần này.",
-      "options": [
-        "机会",
-        "特点",
-        "国家"
-      ],
-      "answer": "机会"
-    },
-    {
-      "q": "每个___都有自己的文化。",
-      "vi": "Mỗi quốc gia đều có văn hóa riêng.",
-      "options": [
-        "国家",
-        "动物",
-        "嘴"
-      ],
-      "answer": "国家"
-    },
-    {
-      "q": "这家店有很多___茶。",
-      "vi": "Cửa hàng này có rất nhiều loại trà.",
-      "options": [
-        "种",
-        "段",
-        "万"
-      ],
-      "answer": "种"
-    },
-    {
-      "q": "这种学习方法有什么___？",
-      "vi": "Phương pháp học này có đặc điểm gì?",
-      "options": [
-        "特点",
-        "机会",
-        "嘴"
-      ],
-      "answer": "特点"
-    },
-    {
-      "q": "他今天没来，真___。",
-      "vi": "Hôm nay anh ấy không đến, thật kỳ lạ.",
-      "options": [
-        "奇怪",
-        "有名",
-        "同意"
-      ],
-      "answer": "奇怪"
-    },
-    {
-      "q": "她认真___准备明天的面试。",
-      "vi": "Cô ấy nghiêm túc chuẩn bị cho buổi phỏng vấn ngày mai.",
-      "options": [
-        "地",
-        "向",
-        "只"
-      ],
-      "answer": "地"
+      "answer": "马"
     }
   ],
   "typing": [
     {
       "dir": "vi-zh",
-      "prompt": "Tôi định vay ngân hàng một phần tiền.",
-      "answer": "我打算向银行借一部分钱",
-      "show": "我打算向银行借一部分钱。"
+      "prompt": "Gần đây con gái thích để tóc ra sau tai.",
+      "answer": "女儿最近喜欢把头发放在耳朵后面",
+      "show": "女儿最近喜欢把头发放在耳朵后面。"
     },
     {
       "dir": "vi-zh",
-      "prompt": "Trong công viên có một chú chó rất đáng yêu.",
-      "answer": "公园里有一只很可爱的小狗",
-      "show": "公园里有一只很可爱的小狗。"
+      "prompt": "Như vậy có thể khiến khuôn mặt cô ấy trông xinh hơn một chút.",
+      "answer": "这样可以使她的脸看上去漂亮一些",
+      "show": "这样可以使她的脸看上去漂亮一些。"
     },
     {
       "dir": "vi-zh",
-      "prompt": "Khoảng thời gian này tôi đặc biệt bận.",
-      "answer": "这段时间我工作特别忙",
-      "show": "这段时间我工作特别忙。"
+      "prompt": "Hồi nhỏ cô ấy thích tóc ngắn, giống con trai.",
+      "answer": "她小时候喜欢短头发像男孩子一样",
+      "show": "她小时候喜欢短头发，像男孩子一样。"
     },
     {
       "dir": "vi-zh",
-      "prompt": "Công ty này không những nổi tiếng mà môi trường cũng rất tốt.",
-      "answer": "这家公司不但很有名而且环境也很好",
-      "show": "这家公司不但很有名，而且环境也很好。"
+      "prompt": "Tôi đã chọn vài tấm ảnh đem rửa ra rồi.",
+      "answer": "我选了几张照片洗出来了",
+      "show": "我选了几张照片洗出来了。"
     },
     {
       "dir": "vi-zh",
-      "prompt": "Tôi tin họ sẽ đồng ý.",
-      "answer": "你没看出来吗？",
-      "show": "你没看出来吗？。"
+      "prompt": "Anh không nhận ra à? Anh ấy là Tiểu Cương mà.",
+      "answer": "你没看出来吗他是小刚啊",
+      "show": "你没看出来吗？他是小刚啊。"
     },
     {
       "dir": "vi-zh",
-      "prompt": "Cảm ơn ông đã cho tôi cơ hội này.",
-      "answer": "谢谢您给我这个机会",
-      "show": "谢谢您给我这个机会。"
+      "prompt": "Hôm nay anh ấy mặc âu phục màu xanh.",
+      "answer": "他今天穿蓝西服",
+      "show": "他今天穿蓝西服。"
     },
     {
       "dir": "vi-zh",
-      "prompt": "Mỗi quốc gia đều có văn hóa riêng.",
-      "answer": "每个国家都有自己的文化",
-      "show": "每个国家都有自己的文化。"
+      "prompt": "Cô bé sinh vào mùa thu năm ngoái, vừa mừng xong sinh nhật một tuổi.",
+      "answer": "她去年秋天出生的刚过完一岁生日",
+      "show": "她去年秋天出生的，刚过完一岁生日。"
     },
     {
       "dir": "vi-zh",
-      "prompt": "Mỗi loại văn hóa đều có đặc điểm riêng.",
-      "answer": "每种文化都有自己的特点",
-      "show": "每种文化都有自己的特点。"
+      "prompt": "Dọc đường đã đi qua rất nhiều nơi.",
+      "answer": "一路上经过了很多地方",
+      "show": "一路上经过了很多地方。"
     },
     {
       "dir": "vi-zh",
-      "prompt": "Về việc này, ngày mai chúng ta thảo luận tiếp.",
-      "answer": "关于这件事我们明天再讨论",
-      "show": "关于这件事，我们明天再讨论。"
+      "prompt": "Tôi ngồi trên thuyền, vừa ngắm vừa chụp ảnh.",
+      "answer": "我坐在船上一边看一边照相",
+      "show": "我坐在船上，一边看一边照相。"
     },
     {
       "dir": "vi-zh",
-      "prompt": "Chỉ cần bạn muốn đi, tôi sẽ đi cùng bạn.",
-      "answer": "只要你想去我就跟你去",
-      "show": "只要你想去，我就跟你去。"
+      "prompt": "Tôi muốn nhanh chóng gửi ảnh cho mọi người, để bạn bè cũng vui lây.",
+      "answer": "我想快点儿把照片发给大家叫朋友们也高兴高兴",
+      "show": "我想快点儿把照片发给大家，叫朋友们也高兴高兴。"
     },
     {
       "dir": "zh-vi",
-      "prompt": "这套房子要九十多万。",
-      "answer": "căn nhà này giá hơn chín trăm nghìn tệ",
+      "prompt": "骑得最快的这位是谁？",
+      "answer": "vị cưỡi nhanh nhất này là ai",
       "alts": [
-        "căn nhà này cần hơn chín trăm nghìn tệ"
+        "người cưỡi nhanh nhất này là ai",
+        "vị cưỡi ngựa nhanh nhất này là ai"
       ]
     },
     {
       "dir": "zh-vi",
-      "prompt": "动物和孩子一样，都需要人照顾。",
-      "answer": "động vật cũng giống trẻ em đều cần người chăm sóc",
+      "prompt": "怎么看上去跟现在不太一样？",
+      "answer": "sao trông không giống bây giờ lắm",
       "alts": [
-        "động vật và trẻ em giống nhau đều cần được chăm sóc"
+        "sao nhìn có vẻ khác bây giờ",
+        "tại sao trông khác bây giờ"
       ]
     },
     {
       "dir": "zh-vi",
-      "prompt": "贵公司不但很有名，而且工作环境也很好。",
-      "answer": "công ty của quý vị không những rất nổi tiếng mà môi trường làm việc cũng rất tốt",
+      "prompt": "她就喜欢听她爸爸学鸟叫。",
+      "answer": "cô bé chỉ thích nghe bố bắt chước tiếng chim kêu",
       "alts": [
-        "quý công ty không chỉ nổi tiếng mà môi trường làm việc cũng tốt"
+        "cô ấy chỉ thích nghe bố giả tiếng chim kêu"
       ]
     },
     {
       "dir": "zh-vi",
-      "prompt": "只要认真地学习一段时间，就会慢慢习惯。",
-      "answer": "chỉ cần nghiêm túc học một thời gian thì sẽ dần quen",
+      "prompt": "这次旅游，我去了不少地方，每个地方都让我非常难忘。",
+      "answer": "chuyến du lịch lần này tôi đã đến khá nhiều nơi nơi nào cũng khiến tôi vô cùng khó quên",
       "alts": [
-        "chỉ cần nghiêm túc tìm hiểu một thời gian sẽ từ từ quen"
+        "chuyến đi lần này tôi đã đến nhiều nơi mỗi nơi đều khiến tôi rất khó quên"
       ]
     }
   ],
   "arrange": [
     {
       "pieces": [
-        "我打算",
-        "向银行",
-        "借一部分钱"
+        "女儿最近喜欢",
+        "把头发放在",
+        "耳朵后面"
       ],
-      "answer": "我打算向银行借一部分钱",
-      "vi": "Tôi định vay ngân hàng một phần tiền."
+      "answer": "女儿最近喜欢把头发放在耳朵后面",
+      "vi": "Gần đây con gái thích để tóc ra sau tai."
     },
     {
       "pieces": [
-        "这套房子",
-        "要九十多",
-        "万"
+        "这样可以使",
+        "她的脸",
+        "看上去漂亮一些"
       ],
-      "answer": "这套房子要九十多万",
-      "vi": "Căn nhà này giá hơn chín trăm nghìn tệ."
+      "answer": "这样可以使她的脸看上去漂亮一些",
+      "vi": "Như vậy có thể khiến khuôn mặt cô ấy trông xinh hơn một chút."
     },
     {
       "pieces": [
-        "公园里",
-        "有一只",
-        "很可爱的小狗"
+        "她小时候",
+        "喜欢短头发",
+        "像男孩子一样"
       ],
-      "answer": "公园里有一只很可爱的小狗",
-      "vi": "Trong công viên có một chú chó rất đáng yêu."
+      "answer": "她小时候喜欢短头发像男孩子一样",
+      "vi": "Hồi nhỏ cô ấy thích tóc ngắn, giống con trai."
     },
     {
       "pieces": [
-        "这只鸟的",
-        "嘴",
-        "是黄色的"
+        "我选了",
+        "几张照片",
+        "洗出来了"
       ],
-      "answer": "这只鸟的嘴是黄色的",
-      "vi": "Mỏ của con chim này màu vàng."
+      "answer": "我选了几张照片洗出来了",
+      "vi": "Tôi đã chọn vài tấm ảnh đem rửa ra rồi."
     },
     {
       "pieces": [
-        "这段时间",
-        "我工作",
-        "特别忙"
+        "你没看出来吗",
+        "他是",
+        "小刚啊"
       ],
-      "answer": "这段时间我工作特别忙",
-      "vi": "Khoảng thời gian này tôi đặc biệt bận."
+      "answer": "你没看出来吗他是小刚啊",
+      "vi": "Anh không nhận ra à? Anh ấy là Tiểu Cương mà."
     },
     {
       "pieces": [
-        "她不但会说汉语",
-        "而且",
-        "会说日语"
+        "他今天",
+        "穿蓝西服",
+        "看上去像40多岁"
       ],
-      "answer": "她不但会说汉语而且会说日语",
-      "vi": "Cô ấy không những biết nói tiếng Trung mà còn biết nói tiếng Nhật."
+      "answer": "他今天穿蓝西服看上去像40多岁",
+      "vi": "Hôm nay anh ấy mặc âu phục xanh, trông như hơn 40 tuổi."
     },
     {
       "pieces": [
-        "这家饭店",
-        "在当地",
-        "很有名"
+        "她去年秋天",
+        "出生的",
+        "刚过完一岁生日"
       ],
-      "answer": "这家饭店在当地很有名",
-      "vi": "Nhà hàng này rất nổi tiếng ở địa phương."
+      "answer": "她去年秋天出生的刚过完一岁生日",
+      "vi": "Cô bé sinh vào mùa thu năm ngoái, vừa mừng xong sinh nhật một tuổi."
     },
     {
       "pieces": [
-        "父母已经",
-        "同意",
-        "我的计划了"
+        "只要她爸爸",
+        "学小鸟叫",
+        "她马上就安静下来了"
       ],
-      "answer": "父母已经同意我的计划了",
-      "vi": "Bố mẹ đã đồng ý với kế hoạch của tôi."
+      "answer": "只要她爸爸学小鸟叫她马上就安静下来了",
+      "vi": "Chỉ cần bố bắt chước tiếng chim nhỏ, cô bé lập tức yên lặng lại."
     },
     {
       "pieces": [
-        "我相信",
-        "他们会",
-        "同意的"
+        "这次旅游",
+        "我去了不少地方",
+        "每个地方都让我非常难忘"
       ],
-      "answer": "你没看出来吗？",
-      "vi": "Tôi tin họ sẽ đồng ý."
+      "answer": "这次旅游我去了不少地方每个地方都让我非常难忘",
+      "vi": "Chuyến du lịch lần này, tôi đã đến khá nhiều nơi; nơi nào cũng khiến tôi rất khó quên."
     },
     {
       "pieces": [
-        "关于这件事",
-        "我们明天",
-        "再讨论"
+        "我坐在船上",
+        "一边看",
+        "一边照相"
       ],
-      "answer": "关于这件事我们明天再讨论",
-      "vi": "Về việc này, ngày mai chúng ta thảo luận tiếp."
+      "answer": "我坐在船上一边看一边照相",
+      "vi": "Tôi ngồi trên thuyền, vừa ngắm vừa chụp ảnh."
     },
     {
       "pieces": [
-        "谢谢您",
-        "给我",
-        "这个机会"
+        "一路上",
+        "经过了",
+        "很多地方"
       ],
-      "answer": "谢谢您给我这个机会",
-      "vi": "Cảm ơn ông đã cho tôi cơ hội này."
+      "answer": "一路上经过了很多地方",
+      "vi": "Dọc đường đã đi qua rất nhiều nơi."
     },
     {
       "pieces": [
-        "每个国家",
-        "都有自己的",
-        "文化"
+        "我想快点儿",
+        "把照片发给大家",
+        "叫朋友们也高兴高兴"
       ],
-      "answer": "每个国家都有自己的文化",
-      "vi": "Mỗi quốc gia đều có văn hóa riêng."
-    },
-    {
-      "pieces": [
-        "每种文化",
-        "都有自己的",
-        "特点"
-      ],
-      "answer": "每种文化都有自己的特点",
-      "vi": "Mỗi loại văn hóa đều có đặc điểm riêng."
-    },
-    {
-      "pieces": [
-        "他今天没来",
-        "真",
-        "奇怪"
-      ],
-      "answer": "他今天没来真奇怪",
-      "vi": "Hôm nay anh ấy không đến, thật kỳ lạ."
-    },
-    {
-      "pieces": [
-        "她认真地",
-        "准备",
-        "明天的面试"
-      ],
-      "answer": "她认真地准备明天的面试",
-      "vi": "Cô ấy nghiêm túc chuẩn bị cho buổi phỏng vấn ngày mai."
+      "answer": "我想快点儿把照片发给大家叫朋友们也高兴高兴",
+      "vi": "Tôi muốn nhanh chóng gửi ảnh cho mọi người, để bạn bè cũng vui lây."
     }
   ],
   "quiz": [
     {
-      "q": "Cấu trúc “只要……就……” biểu thị quan hệ gì?",
+      "q": "Tiêu đề “你没看出来吗？” nghĩa đúng nhất là gì?",
       "opts": [
-        "So sánh",
-        "Điều kiện và kết quả",
-        "Nguyên nhân và nhượng bộ",
-        "Liệt kê thời gian"
-      ],
-      "a": 1
-    },
-    {
-      "q": "Câu nào đúng?",
-      "opts": [
-        "只要你认真学习，就会进步。",
-        "只要你认真学习，但是会进步。",
-        "你认真只要学习，就会进步。",
-        "就只要你学习，会进步。"
+        "Anh không nhìn ra/nhận ra à?",
+        "Anh không muốn xem à?",
+        "Anh chưa xem ảnh à?",
+        "Anh không nhìn thấy tôi à?"
       ],
       "a": 0
     },
     {
-      "q": "“关于” dùng để làm gì?",
+      "q": "Từ nào là lượng từ dùng cho ảnh, giấy và các vật phẳng?",
       "opts": [
-        "Giới thiệu đối tượng/chủ đề được đề cập",
-        "Đếm động vật",
-        "Biểu thị mức độ",
-        "Nối hai hành động liên tiếp"
+        "位",
+        "张",
+        "马",
+        "船"
+      ],
+      "a": 1
+    },
+    {
+      "q": "Từ nào là lượng từ dùng cho người với sắc thái kính trọng?",
+      "opts": [
+        "张",
+        "位",
+        "过",
+        "鸟"
+      ],
+      "a": 1
+    },
+    {
+      "q": "“她去年秋天出生的” nghĩa là gì?",
+      "opts": [
+        "Cô ấy sinh vào mùa thu năm ngoái",
+        "Cô ấy đi du lịch mùa thu năm ngoái",
+        "Cô ấy mừng sinh nhật vào mùa thu",
+        "Cô ấy thích mùa thu"
       ],
       "a": 0
     },
     {
-      "q": "“关于这个工作，还有什么问题吗？” nghĩa là gì?",
+      "q": "Trong “我选了几张照片洗出来了”, “出来” biểu thị điều gì?",
       "opts": [
-        "Bạn có muốn bỏ công việc này không?",
-        "Về công việc này, còn vấn đề gì không?",
-        "Công việc này có nổi tiếng không?",
-        "Ai đồng ý với công việc này?"
-      ],
-      "a": 1
-    },
-    {
-      "q": "Từ nào là lượng từ thường dùng cho động vật?",
-      "opts": [
-        "段",
-        "万",
-        "只",
-        "种"
-      ],
-      "a": 2
-    },
-    {
-      "q": "“不但……而且……” nghĩa gần nhất là gì?",
-      "opts": [
-        "Chỉ cần… thì…",
-        "Không những… mà còn…",
-        "Tuy… nhưng…",
-        "Ngoài… ra…"
-      ],
-      "a": 1
-    },
-    {
-      "q": "Câu nào dùng “地” đúng?",
-      "opts": [
-        "她认真地准备面试。",
-        "她地认真准备面试。",
-        "她认真准备地面试。",
-        "她准备认真地面试。"
+        "Xuất hiện/tạo ra kết quả mới",
+        "Đi xuống phía dưới",
+        "Quay trở lại",
+        "So sánh hai vật"
       ],
       "a": 0
     },
     {
-      "q": "“每种文化都有自己的特点” nghĩa là gì?",
+      "q": "Câu nào dùng “看出来” đúng với nghĩa nhận ra/phân biệt?",
       "opts": [
-        "Mọi quốc gia đều giống nhau",
-        "Mỗi loại văn hóa đều có đặc điểm riêng",
-        "Chỉ một nền văn hóa có đặc điểm",
-        "Văn hóa này rất kỳ lạ"
-      ],
-      "a": 1
-    },
-    {
-      "q": "Từ nào có nghĩa là “cơ hội”?",
-      "opts": [
-        "机会",
-        "特点",
-        "国家",
-        "嘴"
+        "你没看出来吗？他是小刚啊。",
+        "这件衣服看出来很好看。",
+        "天气看出来很冷。",
+        "他看出来像40多岁。"
       ],
       "a": 0
     },
     {
-      "q": "Tiêu đề “你没看出来吗？” nghĩa là gì?",
+      "q": "Trong “她马上就安静下来了”, “下来” biểu thị sự thay đổi nào?",
       "opts": [
-        "Tôi không biết họ có đồng ý không",
-        "Tôi tin họ sẽ đồng ý",
-        "Họ bắt tôi phải đồng ý",
-        "Tôi đã từ chối họ"
+        "Từ động sang tĩnh",
+        "Từ thấp lên cao",
+        "Từ nhớ sang quên",
+        "Từ trong ra ngoài"
       ],
-      "a": 1
+      "a": 0
+    },
+    {
+      "q": "“我也想起来了” có nghĩa là gì?",
+      "opts": [
+        "Tôi cũng nhớ ra rồi",
+        "Tôi cũng đứng dậy rồi",
+        "Tôi cũng nhìn ra rồi",
+        "Tôi cũng đi xuống rồi"
+      ],
+      "a": 0
+    },
+    {
+      "q": "使、叫、让 trong bài chủ yếu dùng để biểu thị ý gì?",
+      "opts": [
+        "Khiến/cho ai đó làm gì hoặc có trạng thái nào đó",
+        "So sánh hơn kém",
+        "Đếm người và vật",
+        "Chỉ thời gian đã qua"
+      ],
+      "a": 0
+    },
+    {
+      "q": "“一路上经过了很多地方” nghĩa là gì?",
+      "opts": [
+        "Dọc đường đã đi qua rất nhiều nơi",
+        "Cả đường đều có rất nhiều người",
+        "Tôi đã sống ở nhiều nơi",
+        "Tôi đã đi thuyền rất lâu"
+      ],
+      "a": 0
     }
   ]
 };
 const SPEAKING_PASSAGES = [
   {
-    "title": "Kế hoạch mua nhà",
-    "theme": "TÀI CHÍNH",
-    "icon": "房",
-    "han": "我最近打算买一套房子，价格大约九十万。自己的钱还不够，所以想向银行借一部分。只要把申请材料准备好，我相信很快就会有结果。",
-    "py": "Wǒ zuìjìn dǎsuàn mǎi yí tào fángzi, jiàgé dàyuē jiǔshí wàn. Zìjǐ de qián hái bú gòu, suǒyǐ xiǎng xiàng yínháng jiè yí bùfen. Zhǐyào bǎ shēnqǐng cáiliào zhǔnbèi hǎo, wǒ xiāngxìn hěn kuài jiù huì yǒu jiéguǒ.",
-    "vi": "Gần đây tôi dự định mua một căn nhà, giá khoảng chín trăm nghìn tệ. Tiền của tôi vẫn chưa đủ nên muốn vay ngân hàng một phần. Chỉ cần chuẩn bị tốt hồ sơ đăng ký, tôi tin sẽ sớm có kết quả.",
+    "title": "Ở nhà",
+    "theme": "NGOẠI HÌNH",
+    "icon": "家",
+    "han": "爸爸：女儿最近喜欢把头发放在耳朵后面，你知道为什么吗？妈妈：这样可以使她的脸看上去漂亮一些。爸爸：我最近觉得她和以前不太一样了。妈妈：女儿变化不小，她小时候喜欢短头发，像男孩子一样。爸爸：我也想起来了。她现在慢慢地开始像个女孩子了。",
+    "py": "Bàba: Nǚ'ér zuìjìn xǐhuan bǎ tóufa fàng zài ěrduo hòumian, nǐ zhīdào wèishénme ma? Māma: Zhèyàng kěyǐ shǐ tā de liǎn kàn shàngqu piàoliang yìxiē. Bàba: Wǒ zuìjìn juéde tā hé yǐqián bú tài yíyàng le. Māma: Nǚ'ér biànhuà bù xiǎo, tā xiǎoshíhou xǐhuan duǎn tóufa, xiàng nánháizi yíyàng. Bàba: Wǒ yě xiǎng qǐlái le. Tā xiànzài mànmàn de kāishǐ xiàng ge nǚháizi le.",
+    "vi": "Bố nói gần đây con gái thích để tóc ra sau tai. Mẹ cho rằng như vậy khiến khuôn mặt con bé trông xinh hơn. Hai người nhận ra con gái đã thay đổi khá nhiều: hồi nhỏ thích tóc ngắn giống con trai, còn bây giờ dần ra dáng con gái hơn.",
     "vocabulary": [
       {
-        "han": "向",
-        "py": "xiàng",
-        "vi": "hướng tới; đối với"
+        "han": "耳朵",
+        "py": "ěrduo",
+        "vi": "tai"
       },
       {
-        "han": "万",
-        "py": "wàn",
-        "vi": "mười nghìn"
+        "han": "脸",
+        "py": "liǎn",
+        "vi": "khuôn mặt"
       },
       {
-        "han": "相信",
-        "py": "xiāngxìn",
-        "vi": "tin tưởng"
+        "han": "短",
+        "py": "duǎn",
+        "vi": "ngắn"
+      },
+      {
+        "han": "想起来",
+        "py": "xiǎng qǐlái",
+        "vi": "nhớ ra"
       }
     ]
   },
   {
-    "title": "Chăm sóc thú cưng",
-    "theme": "ĐỘNG VẬT",
-    "icon": "狗",
-    "han": "我家养了一只小狗。前几天它的嘴受伤了，所以这段时间我每天都照顾它。动物也有感情，只要我们对它们好，它们也会相信我们。",
-    "py": "Wǒ jiā yǎng le yì zhī xiǎogǒu. Qián jǐ tiān tā de zuǐ shòushāng le, suǒyǐ zhè duàn shíjiān wǒ měitiān dōu zhàogù tā. Dòngwù yě yǒu gǎnqíng, zhǐyào wǒmen duì tāmen hǎo, tāmen yě huì xiāngxìn wǒmen.",
-    "vi": "Nhà tôi nuôi một chú chó nhỏ. Mấy hôm trước nó bị thương ở miệng, nên khoảng thời gian này tôi chăm sóc nó mỗi ngày. Động vật cũng có cảm xúc, chỉ cần chúng ta đối xử tốt với chúng, chúng cũng sẽ tin tưởng chúng ta.",
+    "title": "Đang xem ảnh",
+    "theme": "ẢNH & TRANG PHỤC",
+    "icon": "照",
+    "han": "小丽：上次我们参加骑马比赛的照片，我选了几张洗出来了。同事：快给我看看。骑得最快的这位是谁？小丽：你没看出来吗？他是小刚啊。同事：怎么看上去跟现在不太一样？小丽：他上班穿西服、衬衫，比赛的时候穿的是运动服。同事：他今天穿蓝西服，看上去像40多岁，还是穿运动服让他更年轻。",
+    "py": "Xiǎo Lì: Shàng cì wǒmen cānjiā qímǎ bǐsài de zhàopiàn, wǒ xuǎn le jǐ zhāng xǐ chūlái le. Tóngshì: Kuài gěi wǒ kànkan. Qí de zuì kuài de zhè wèi shì shéi? Xiǎo Lì: Nǐ méi kàn chūlái ma? Tā shì Xiǎo Gāng a. Tóngshì: Zěnme kàn shàngqu gēn xiànzài bú tài yíyàng? Xiǎo Lì: Tā shàngbān chuān xīfú, chènshān, bǐsài de shíhou chuān de shì yùndòngfú. Tóngshì: Tā jīntiān chuān lán xīfú, kàn shàngqu xiàng sìshí duō suì, háishi chuān yùndòngfú ràng tā gèng niánqīng.",
+    "vi": "Tiểu Lệ và đồng nghiệp xem những tấm ảnh của cuộc thi cưỡi ngựa. Đồng nghiệp không nhận ra Tiểu Cương vì cách ăn mặc khiến anh ấy trông khác hẳn: mặc âu phục xanh trông hơn 40 tuổi, còn đồ thể thao khiến anh ấy trẻ hơn.",
     "vocabulary": [
       {
-        "han": "只",
-        "py": "zhī",
-        "vi": "con"
+        "han": "马",
+        "py": "mǎ",
+        "vi": "ngựa"
       },
       {
-        "han": "嘴",
-        "py": "zuǐ",
-        "vi": "miệng"
+        "han": "张",
+        "py": "zhāng",
+        "vi": "tấm; lượng từ"
       },
       {
-        "han": "动物",
-        "py": "dòngwù",
-        "vi": "động vật"
+        "han": "位",
+        "py": "wèi",
+        "vi": "vị; lượng từ kính trọng"
       },
       {
-        "han": "段",
-        "py": "duàn",
-        "vi": "khoảng"
+        "han": "蓝",
+        "py": "lán",
+        "vi": "xanh lam"
       }
     ]
   },
   {
-    "title": "Buổi phỏng vấn",
-    "theme": "CÔNG VIỆC",
-    "icon": "职",
-    "han": "昨天我参加了一次面试。那家公司不但很有名，而且工作环境也很好。面试官问我的家人同意不同意。我说只要我认真工作，你没看出来吗？。",
-    "py": "Zuótiān wǒ cānjiā le yí cì miànshì. Nà jiā gōngsī búdàn hěn yǒumíng, érqiě gōngzuò huánjìng yě hěn hǎo. Miànshìguān wèn wǒ jiārén tóngyi bu tóngyì. Wǒ shuō zhǐyào wǒ rènzhēn gōngzuò, wǒ xiāngxìn tāmen huì tóngyì de.",
-    "vi": "Hôm qua tôi tham gia một buổi phỏng vấn. Công ty đó không những rất nổi tiếng mà môi trường làm việc cũng rất tốt. Người phỏng vấn hỏi người nhà tôi có đồng ý không. Tôi nói chỉ cần tôi làm việc nghiêm túc, tôi tin họ sẽ đồng ý.",
+    "title": "Tại nhà Tiểu Lệ",
+    "theme": "GIA ĐÌNH",
+    "icon": "秋",
+    "han": "朋友：我们一年没见面了吧？小丽：听说你都有女儿了？她多大了？朋友：她去年秋天出生的，刚过完一岁生日。小丽：她喜欢什么？我送给她。朋友：她就喜欢听她爸爸学鸟叫。哭的时候，只要她爸爸学小鸟叫，她马上就安静下来了。小丽：啊？这个礼物我没办法送。",
+    "py": "Péngyou: Wǒmen yì nián méi jiànmiàn le ba? Xiǎo Lì: Tīngshuō nǐ dōu yǒu nǚ'ér le? Tā duō dà le? Péngyou: Tā qùnián qiūtiān chūshēng de, gāng guò wán yí suì shēngrì. Xiǎo Lì: Tā xǐhuan shénme? Wǒ sòng gěi tā. Péngyou: Tā jiù xǐhuan tīng tā bàba xué niǎo jiào. Kū de shíhou, zhǐyào tā bàba xué xiǎoniǎo jiào, tā mǎshàng jiù ānjìng xiàlái le. Xiǎo Lì: A? Zhège lǐwù wǒ méi bànfǎ sòng.",
+    "vi": "Một người bạn kể con gái mình sinh vào mùa thu năm ngoái và vừa tròn một tuổi. Cô bé thích nghe bố bắt chước tiếng chim; lúc khóc, chỉ cần bố làm tiếng chim nhỏ là bé lập tức yên lặng.",
     "vocabulary": [
       {
-        "han": "不但……而且……",
-        "py": "búdàn…érqiě…",
-        "vi": "không những… mà còn…"
+        "han": "秋天",
+        "py": "qiūtiān",
+        "vi": "mùa thu"
       },
       {
-        "han": "有名",
-        "py": "yǒumíng",
-        "vi": "nổi tiếng"
+        "han": "过",
+        "py": "guò",
+        "vi": "mừng; trải qua"
       },
       {
-        "han": "同意",
-        "py": "tóngyì",
-        "vi": "đồng ý"
+        "han": "鸟",
+        "py": "niǎo",
+        "vi": "chim"
+      },
+      {
+        "han": "哭",
+        "py": "kū",
+        "vi": "khóc"
       }
     ]
   },
   {
-    "title": "Một cơ hội tốt",
-    "theme": "PHÁT TRIỂN",
-    "icon": "机",
-    "han": "老师给我介绍了一个实习机会。关于具体的工作，我还有几个问题想问。但是我相信，只要认真准备，我一定能抓住这次机会。",
-    "py": "Lǎoshī gěi wǒ jièshào le yí ge shíxí jīhuì. Guānyú jùtǐ de gōngzuò, wǒ hái yǒu jǐ ge wèntí xiǎng wèn. Dànshì wǒ xiāngxìn, zhǐyào rènzhēn zhǔnbèi, wǒ yídìng néng zhuāzhù zhè cì jīhuì.",
-    "vi": "Giáo viên giới thiệu cho tôi một cơ hội thực tập. Về công việc cụ thể, tôi vẫn còn vài vấn đề muốn hỏi. Tuy nhiên tôi tin chỉ cần nghiêm túc chuẩn bị, tôi nhất định có thể nắm bắt cơ hội lần này.",
+    "title": "Chuyến du lịch",
+    "theme": "HOÀNG HÀ",
+    "icon": "河",
+    "han": "这次旅游，我去了不少地方，每个地方都让我非常难忘。我先去看了黄河，黄河是中国有名的大河，我坐在船上，一边看一边照相。一路上经过了很多地方，每个地方都不一样。我想快点儿把照片发给大家，叫朋友们也高兴高兴。",
+    "py": "Zhè cì lǚyóu, wǒ qù le bù shǎo dìfang, měi ge dìfang dōu ràng wǒ fēicháng nánwàng. Wǒ xiān qù kàn le Huáng Hé, Huáng Hé shì Zhōngguó yǒumíng de dà hé, wǒ zuò zài chuán shang, yìbiān kàn yìbiān zhàoxiàng. Yílù shang jīngguò le hěn duō dìfang, měi ge dìfang dōu bù yíyàng. Wǒ xiǎng kuài diǎnr bǎ zhàopiàn fā gěi dàjiā, jiào péngyoumen yě gāoxing gāoxing.",
+    "vi": "Chuyến du lịch lần này có rất nhiều nơi đáng nhớ. Người kể đi ngắm Hoàng Hà, ngồi trên thuyền vừa ngắm vừa chụp ảnh, đi qua nhiều nơi và muốn nhanh chóng gửi ảnh cho bạn bè cùng vui.",
     "vocabulary": [
       {
-        "han": "关于",
-        "py": "guānyú",
-        "vi": "về; liên quan đến"
+        "han": "黄河",
+        "py": "Huáng Hé",
+        "vi": "Hoàng Hà"
       },
       {
-        "han": "机会",
-        "py": "jīhuì",
-        "vi": "cơ hội"
+        "han": "船",
+        "py": "chuán",
+        "vi": "thuyền; tàu"
       },
       {
-        "han": "相信",
-        "py": "xiāngxìn",
-        "vi": "tin tưởng"
-      }
-    ]
-  },
-  {
-    "title": "Văn hóa các nước",
-    "theme": "VĂN HÓA",
-    "icon": "国",
-    "han": "世界上有很多国家，也有很多种文化。每种文化都有自己的特点。刚到一个新的国家时，有些习惯可能让你觉得很奇怪，但是只要认真地了解，就会慢慢习惯。",
-    "py": "Shìjiè shang yǒu hěn duō guójiā, yě yǒu hěn duō zhǒng wénhuà. Měi zhǒng wénhuà dōu yǒu zìjǐ de tèdiǎn. Gāng dào yí ge xīn de guójiā shí, yǒuxiē xíguàn kěnéng ràng nǐ juéde hěn qíguài, dànshì zhǐyào rènzhēn de liǎojiě, jiù huì mànman xíguàn.",
-    "vi": "Trên thế giới có rất nhiều quốc gia và nhiều loại văn hóa. Mỗi loại văn hóa đều có đặc điểm riêng. Khi mới đến một quốc gia mới, một số thói quen có thể khiến bạn cảm thấy rất lạ, nhưng chỉ cần nghiêm túc tìm hiểu thì sẽ dần quen.",
-    "vocabulary": [
-      {
-        "han": "国家",
-        "py": "guójiā",
-        "vi": "quốc gia"
-      },
-      {
-        "han": "种",
-        "py": "zhǒng",
-        "vi": "loại"
-      },
-      {
-        "han": "特点",
-        "py": "tèdiǎn",
-        "vi": "đặc điểm"
-      },
-      {
-        "han": "奇怪",
-        "py": "qíguài",
-        "vi": "kỳ lạ"
-      }
-    ]
-  },
-  {
-    "title": "Tin tưởng bản thân",
-    "theme": "ĐỘNG LỰC",
-    "icon": "信",
-    "han": "遇到一个新机会时，很多人常常担心家人或朋友不会同意。我觉得只要自己的计划清楚，态度认真，而且认真地说明理由，大家就会理解和支持。最重要的是要相信自己。",
-    "py": "Yùdào yí ge xīn jīhuì shí, hěn duō rén chángcháng dānxīn jiārén huò péngyou bú huì tóngyì. Wǒ juéde zhǐyào zìjǐ de jìhuà qīngchu, tàidu rènzhēn, érqiě rènzhēn de shuōmíng lǐyóu, dàjiā jiù huì lǐjiě hé zhīchí. Zuì zhòngyào de shì yào xiāngxìn zìjǐ.",
-    "vi": "Khi gặp một cơ hội mới, nhiều người thường lo gia đình hoặc bạn bè sẽ không đồng ý. Tôi nghĩ chỉ cần kế hoạch của mình rõ ràng, thái độ nghiêm túc, đồng thời giải thích cẩn thận lý do, mọi người sẽ hiểu và ủng hộ. Quan trọng nhất là phải tin vào bản thân.",
-    "vocabulary": [
-      {
-        "han": "机会",
-        "py": "jīhuì",
-        "vi": "cơ hội"
-      },
-      {
-        "han": "同意",
-        "py": "tóngyì",
-        "vi": "đồng ý"
-      },
-      {
-        "han": "相信",
-        "py": "xiāngxìn",
-        "vi": "tin tưởng"
-      },
-      {
-        "han": "地",
-        "py": "de",
-        "vi": "trợ từ trạng ngữ"
+        "han": "经过",
+        "py": "jīngguò",
+        "vi": "đi ngang qua"
       }
     ]
   }
 ];
 const WRITING_WORDS = [
   {
-    "han": "向",
-    "py": "xiàng",
-    "vi": "hướng về"
+    "han": "耳",
+    "py": "ěr",
+    "vi": "tai; chữ trong 耳朵"
   },
   {
-    "han": "万",
-    "py": "wàn",
-    "vi": "mười nghìn"
+    "han": "朵",
+    "py": "duǒ",
+    "vi": "chữ trong 耳朵"
   },
   {
-    "han": "只",
-    "py": "zhī",
-    "vi": "con; chiếc"
+    "han": "脸",
+    "py": "liǎn",
+    "vi": "mặt; khuôn mặt"
   },
   {
-    "han": "嘴",
-    "py": "zuǐ",
-    "vi": "miệng"
+    "han": "短",
+    "py": "duǎn",
+    "vi": "ngắn"
   },
   {
-    "han": "动",
-    "py": "dòng",
-    "vi": "động"
+    "han": "马",
+    "py": "mǎ",
+    "vi": "ngựa"
   },
   {
-    "han": "物",
-    "py": "wù",
-    "vi": "vật"
+    "han": "张",
+    "py": "zhāng",
+    "vi": "tấm; tờ; lượng từ"
   },
   {
-    "han": "段",
-    "py": "duàn",
-    "vi": "đoạn"
+    "han": "位",
+    "py": "wèi",
+    "vi": "vị; lượng từ kính trọng"
   },
   {
-    "han": "但",
-    "py": "dàn",
-    "vi": "nhưng"
+    "han": "蓝",
+    "py": "lán",
+    "vi": "xanh lam"
   },
   {
-    "han": "而",
-    "py": "ér",
-    "vi": "mà; và"
+    "han": "秋",
+    "py": "qiū",
+    "vi": "mùa thu"
   },
   {
-    "han": "且",
-    "py": "qiě",
-    "vi": "hơn nữa"
+    "han": "天",
+    "py": "tiān",
+    "vi": "trời; ngày"
   },
   {
-    "han": "有",
-    "py": "yǒu",
-    "vi": "có"
+    "han": "过",
+    "py": "guò",
+    "vi": "qua; trải qua; mừng"
   },
   {
-    "han": "名",
-    "py": "míng",
-    "vi": "tên; nổi tiếng"
+    "han": "鸟",
+    "py": "niǎo",
+    "vi": "chim"
   },
   {
-    "han": "同",
-    "py": "tóng",
-    "vi": "cùng; đồng"
+    "han": "哭",
+    "py": "kū",
+    "vi": "khóc"
   },
   {
-    "han": "意",
-    "py": "yì",
-    "vi": "ý"
+    "han": "黄",
+    "py": "huáng",
+    "vi": "màu vàng"
   },
   {
-    "han": "相",
-    "py": "xiāng",
-    "vi": "lẫn nhau; tương"
+    "han": "河",
+    "py": "hé",
+    "vi": "sông"
   },
   {
-    "han": "信",
-    "py": "xìn",
-    "vi": "tin"
+    "han": "船",
+    "py": "chuán",
+    "vi": "thuyền; tàu"
   },
   {
-    "han": "关",
-    "py": "guān",
-    "vi": "liên quan; đóng"
-  },
-  {
-    "han": "于",
-    "py": "yú",
-    "vi": "ở; về"
-  },
-  {
-    "han": "机",
-    "py": "jī",
-    "vi": "cơ; cơ hội"
-  },
-  {
-    "han": "会",
-    "py": "huì",
-    "vi": "biết; hội"
-  },
-  {
-    "han": "国",
-    "py": "guó",
-    "vi": "nước"
-  },
-  {
-    "han": "家",
-    "py": "jiā",
-    "vi": "nhà"
-  },
-  {
-    "han": "种",
-    "py": "zhǒng",
-    "vi": "loại"
-  },
-  {
-    "han": "特",
-    "py": "tè",
-    "vi": "đặc biệt"
-  },
-  {
-    "han": "点",
-    "py": "diǎn",
-    "vi": "điểm"
-  },
-  {
-    "han": "奇",
-    "py": "qí",
-    "vi": "kỳ lạ"
-  },
-  {
-    "han": "怪",
-    "py": "guài",
-    "vi": "lạ"
-  },
-  {
-    "han": "地",
-    "py": "de",
-    "vi": "trợ từ trạng ngữ"
+    "han": "经",
+    "py": "jīng",
+    "vi": "qua; trải qua; chữ trong 经过"
   }
 ];
 const TABS = [
@@ -2007,20 +1901,20 @@ const TABS = [
 ];
 const MOTIVATIONS = [
   {
-    "han": "时间会记住每一次认真练习。",
-    "vi": "Thời gian sẽ ghi nhận mỗi lần bạn luyện tập nghiêm túc."
+    "han": "百闻不如一见。",
+    "vi": "Trăm nghe không bằng một thấy."
   },
   {
-    "han": "兴趣是最好的老师，坚持会让你走得更远。",
-    "vi": "Hứng thú là người thầy tốt nhất; kiên trì sẽ giúp bạn đi xa hơn."
+    "han": "你没看出来吗？他是小刚啊。",
+    "vi": "Anh không nhận ra à? Anh ấy là Tiểu Cương mà."
   },
   {
-    "han": "不怕迟一点儿，只怕今天不开始。",
-    "vi": "Không sợ bắt đầu hơi muộn, chỉ sợ hôm nay không bắt đầu."
+    "han": "我也想起来了。",
+    "vi": "Tôi cũng nhớ ra rồi."
   },
   {
-    "han": "每天学半个小时，进步会越来越明显。",
-    "vi": "Mỗi ngày học nửa tiếng, sự tiến bộ sẽ ngày càng rõ."
+    "han": "每个地方都让我非常难忘。",
+    "vi": "Mỗi nơi đều khiến tôi vô cùng khó quên."
   }
 ];
 
@@ -2456,7 +2350,7 @@ function matchHTML(){return `<div class="panel section"><div class="section-titl
 function matchData(){if(state.matchMode==='vocab')return LESSON.vocabulary.map(v=>({key:String(v.id),left:v.han,right:v.vi}));return LESSON.readings.flatMap((d,di)=>d.lines.map((l,li)=>({key:`${di}-${li}`,left:l.han,right:l.vi}))).slice(0,12)}
 function bindMatch(){document.querySelectorAll('[data-match-mode]').forEach(b=>b.onclick=()=>{state.matchMode=b.dataset.matchMode;state.matchLeft=null;state.matchRight=null;state.matched=new Set();render()});const data=matchData();const rights=shuffle(data.map(x=>({key:x.key,text:x.right})));document.getElementById('matchStage').innerHTML=`<div class="match-board"><div class="match-column">${data.map(x=>`<button class="match-card" data-side="left" data-key="${x.key}"><span class="cn">${x.left}</span></button>`).join('')}</div><div class="match-column">${rights.map(x=>`<button class="match-card" data-side="right" data-key="${x.key}">${x.text}</button>`).join('')}</div></div><div id="matchStatus" class="match-status">Chọn một thẻ ở mỗi bên.</div>`;document.querySelectorAll('.match-card').forEach(b=>b.onclick=()=>{if(b.classList.contains('matched'))return;const side=b.dataset.side;document.querySelectorAll(`.match-card[data-side="${side}"]`).forEach(x=>x.classList.remove('selected'));b.classList.add('selected');state[side==='left'?'matchLeft':'matchRight']=b;if(state.matchLeft&&state.matchRight){const ok=state.matchLeft.dataset.key===state.matchRight.dataset.key;if(ok){state.matchLeft.classList.add('matched');state.matchRight.classList.add('matched');state.matched.add(state.matchLeft.dataset.key);addScore(8);answerFeedback(true);document.getElementById('matchStatus').textContent='Chính xác!';if(side==='right'){const spoken=state.matchLeft.textContent.trim();setTimeout(()=>speak(spoken),430)}}else{state.matchLeft.classList.add('wrong');state.matchRight.classList.add('wrong');document.getElementById('matchStatus').textContent='Hai thẻ chưa khớp.';answerFeedback(false);setTimeout(()=>{state.matchLeft?.classList.remove('wrong','selected');state.matchRight?.classList.remove('wrong','selected');state.matchLeft=null;state.matchRight=null},500)}if(ok){state.matchLeft.classList.remove('selected');state.matchRight.classList.remove('selected');state.matchLeft=null;state.matchRight=null;document.getElementById('matchCount').textContent=`${state.matched.size}/${data.length} cặp`;if(state.matched.size===data.length){confetti();document.getElementById('matchStatus').textContent='Hoàn thành toàn bộ cặp nối!'}}}})}
 
-function quizHTML(){return `<div class="panel quiz-card"><div class="quiz-top"><div><div class="eyebrow">HSK 3 • BÀI 17</div><h2 style="margin:2px 0">Trắc nghiệm ${LESSON.quiz.length} câu</h2></div><div class="quiz-stats"><span class="quiz-pill">Điểm <b id="quizScore">${state.quizScore}</b>/${LESSON.quiz.length}</span><span class="quiz-pill">Câu <b id="quizNum">${Math.min(state.quiz+1,LESSON.quiz.length)}</b>/${LESSON.quiz.length}</span></div></div><div id="quizStage"></div></div>`}
+function quizHTML(){return `<div class="panel quiz-card"><div class="quiz-top"><div><div class="eyebrow">HSK 3 • BÀI 19</div><h2 style="margin:2px 0">Trắc nghiệm ${LESSON.quiz.length} câu</h2></div><div class="quiz-stats"><span class="quiz-pill">Điểm <b id="quizScore">${state.quizScore}</b>/${LESSON.quiz.length}</span><span class="quiz-pill">Câu <b id="quizNum">${Math.min(state.quiz+1,LESSON.quiz.length)}</b>/${LESSON.quiz.length}</span></div></div><div id="quizStage"></div></div>`}
 function renderQuiz(){
   const q=LESSON.quiz[state.quiz],stage=document.getElementById('quizStage');setEnterAction(null);
   if(!q){stage.innerHTML=finishCard(`Hoàn thành trắc nghiệm: ${state.quizScore}/${LESSON.quiz.length}`,LESSON.quiz.length);return}
@@ -2793,5 +2687,8 @@ document.addEventListener('keydown',e=>{
 renderTabs();render();
 document.getElementById('soundToggle').onclick=()=>{soundOn=!soundOn;document.getElementById('soundToggle').textContent=soundOn?'音':'静'};
 </script>
-</body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../supabase-config.js"></script>
+<script src="../hsk-auth.js"></script>
+<script src="../hsk-cloud-bridge.js"></script></body>
 </html>
